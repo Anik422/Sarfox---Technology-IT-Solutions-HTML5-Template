@@ -1,0 +1,257 @@
+/*==========================================================================
+Services
+========================================================================== */
+.services__area {
+    background-color: $thin-bg;    
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &-item {
+        background: $white;
+        padding: 40px 35px;
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s ease-out 0s;
+            background: $primary-color1;
+            z-index: -1;
+            opacity: 0;
+        }
+        p {
+            padding-bottom: 25px;
+            border-bottom: 1px solid $border2;
+            margin-bottom: 25px;
+            transition: all 0.4s ease-out 0s;
+        }
+        h3 {
+            a {
+                color: $secondary-color;
+                display: inline-block;
+                margin: 20px 0 10px 0;
+                transition: all 0.4s ease-out 0s;
+                font-family: $heading-font;
+            }
+        }
+        a {
+            text-transform: capitalize;
+            font-weight: 700;
+            font-family: $body-font;
+            color: $secondary-color;
+            transition: all 0.4s ease-out 0s;
+            display: inline-block;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            right: 0;
+            top: 0;
+            background-image: url('img/services-2.png');
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 60%;
+            height: 150px;        
+            transition: all 0.4s ease-out 0s;    
+        }
+        &-icon {                        
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            border-radius: 50%;
+            background: $thin-bg;
+            text-align: center;
+            line-height: 98px;
+            color: $primary-color;
+            img {
+                max-width: 45px;
+                transform: rotateY(0deg);
+            }           
+        }
+        &:hover {         
+            &::after {
+                background-image: url('img/white-2.png');         
+            }
+            &::before {
+                opacity: 1;
+            }
+            h3 a {
+                color: $white;
+            }
+            p {
+                color: $white;
+            }
+            a {
+                color: $white;
+            }
+        }
+    }
+}
+/*==========================================================================
+Services Details
+========================================================================== */
+.services__details {
+    background: $thin-bg;
+    &-widget-category {
+        box-shadow: 0 0 70px $shadow;
+        padding: 40px 30px;
+        background: $white;
+        ul {
+            li {
+                position: relative;
+                list-style: none;
+                &::after {
+                    background: $primary-color1;
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 0;
+                    height: 100%;
+                    top: 0;
+                    bottom: 0;
+                    transition: all 0.5s ease-in-out;
+                    z-index: 1;
+                }
+                a {
+                    display: block;
+                    color: $secondary-color;
+                    font-weight: 500;
+                    border: 1px solid $border2;
+                    margin-bottom: 15px;
+                    padding: 16px 20px;   
+                    transition: all 0.4s ease-out 0s;
+                    position: relative;
+                    z-index: 2;         
+                    i {
+                        float: right;
+                        position: relative;
+                        z-index: 1;                    
+                        &::before {
+                            color: $white;
+                            width: 30px;
+                            height: 30px;
+                            line-height: 30px;
+                            display: inline-block;
+                            background: $primary-color1;
+                            text-align: center;
+                            font-size: 14px;
+                            position: relative;
+                            top: -2px;   
+                            transition: all 0.4s ease-out 0s;
+                        }
+                    }
+                }
+                &:last-child a {
+                    margin: 0;
+                }
+                &:hover {
+                    &::after {
+                        width: 100%;
+                    }
+                    a {
+                        color: $white;
+                        i::before {
+                            background: $white;
+                            color: $primary-color;
+                        }
+                    }
+                }                 
+            }
+        }
+    }
+    &-widget-hours {
+        padding: 40px 30px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        &::after{
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: '';
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: $secondary-color;
+            opacity: 0.8;
+        }
+        h3 {
+            color: $white;
+            position: relative;
+            z-index: 2;
+        }
+        ul {
+            position: relative;
+            z-index: 2;
+            li {
+                color: $white;
+                padding: 5px;
+                p {
+                    float: right;
+                    color: $white;
+                }
+            }
+        }
+    }
+    &-content {
+        h4 {
+            a {                
+                font-size: 30px;
+                line-height: 40px;
+                font-weight: 700;
+                color: $secondary-color;
+            }
+        }
+        p {
+            margin-bottom: 25px;
+            color: $li-color;
+        }
+        ul {
+            li {
+                margin-bottom: 10px;
+                color: $li-color;
+                i {
+                    color: $primary-color;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    &-services {
+        h4 {
+            position: relative;
+            font-size: 30px;
+            line-height: 40px;
+            font-weight: 700;
+            border-top: 1px solid $border2;           
+        }
+    }
+    &-counter {
+        padding: 30px 30px 5px 30px;
+        background: $white;
+    }
+}
+@media (max-width: 427px) {
+    .services__area {
+        &-item {
+            &-icon {                        
+                width: 90px;
+                height: 90px;
+                line-height: 88px;
+                img {
+                    max-width: 40px;
+                }           
+            }
+            h3 {
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+    }    
+}

@@ -1,0 +1,199 @@
+/*==========================================================================
+Footer
+========================================================================== */
+.footer__area {
+    background: $secondary-color;
+    &-content {
+        p {
+            color: $white;
+            padding: 10px  30px 0 0;
+        }
+    }
+    &-logo{
+        a {
+            img{                
+                max-width: 135px;
+                margin-bottom: 25px;
+            }
+        }
+    }
+    &-title {
+        h3 {
+            color:$white;
+            margin-bottom: 50px;
+            position: relative;
+            &::before{
+                position: absolute;
+                content: '';
+                height: 2px;
+                background: $body-color;
+                bottom: -25px;
+                left: 0;
+                width: 150px;
+                opacity: 20%;
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                height: 4px;
+                background: $primary-color;
+                bottom: -26px;
+                left: 0;
+                width: 40px;
+            }
+        }
+    }
+    &-footer-menu {
+        ul {
+            li {
+                margin-bottom: 15px;
+                a {
+                    color: $white;
+                    transition: .4s;
+                    position: relative;
+                    left: 0;
+                    &:hover {
+                        color: $primary-color;
+                        left: 5px;
+                    }
+                }
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    &-contact-info {
+        &-item {
+            &-icon {                
+                i {                        
+                    color: $primary-color;
+                    margin-right: 10px;
+                    font-size: 18px;
+                }
+            }
+            &-text {                
+                a {                        
+                    color: $white;
+                }
+            }
+        }
+    }
+    &-bottom {
+        background: $secondary-color;
+        border-top: 1px solid #6f6f6f4f;
+        &-left {
+            p {
+                color: $white;
+            }
+            a {
+                color: $primary-color;
+                font-weight: 500;
+            }
+        }
+    }
+    &-bottom-right {
+        ul {
+            li{
+                i{   
+                    margin-right: 15px;
+                    background: $li-color;
+                    color: $white;
+                    display: block;
+                    height: 40px;
+                    width: 40px;
+                    text-align: center;
+                    line-height: 40px;
+                    font-size: 14px;
+                    border-radius: 50%;
+                    transition: .3s;
+                    &:hover {
+                        background: $primary-color;
+                    }            
+                }
+            }
+        }
+    }
+    &-footer-widget {
+        form {
+            input {
+                width: 100%;
+                height: 56px;
+                background: $white;
+                padding-left: 25px;
+                margin-bottom: 20px;
+            }
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
+/*==========================================================================
+Copyright
+========================================================================== */
+.copyright__area {
+    position: relative;
+    padding: 30px 0;
+    background: $border5;
+    &-left {
+        p {
+            color: $border4;
+            a {
+                color: $primary-color;
+            }
+        }
+    }
+    &-right {
+        ul {
+            li {
+                display: inline-block;
+                &:last-child a {
+                    padding: 0;
+                    margin: 0;
+                    border: 0;
+                }
+                a {
+                    color: $border4;
+                    margin-right: 15px;
+                    padding-right: 15px;
+                    border-right: 1px solid $border4;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        color: $primary-color2;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1199px) {
+	.fo-b {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 991px) {
+    .footer__area {
+        &-contact-info {
+            &-item {
+                display: flex !important;
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    .footer__area {
+        &-bottom-left {
+            text-align: center;            
+        }
+        &-bottom-right {
+            text-align: center;            
+        }
+    }
+    .copyright__area {
+        text-align: center;
+        &-right {
+            text-align: center;
+        }
+    }
+}

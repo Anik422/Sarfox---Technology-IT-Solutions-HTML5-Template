@@ -1,0 +1,52 @@
+/*==========================================================================
+Choose
+========================================================================== */
+.choose__ua {
+    background-color: $thin-bg;
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    position: relative;
+    &-left {
+        position: absolute;
+        background-position: center left;
+        background-size: cover;
+        background-repeat: repeat;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 47%;
+        height: 100%;
+    }
+    &-right {
+        max-width: 560px;
+        &-list {
+            &-icon {
+                text-align: center;
+                background: $white;
+                padding: 45px 30px;                
+                i::before {
+                    font-size: 45px;
+                    color: $primary-color;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+.choose__ua-right-list-icon-hover {
+    background: $primary-color1;
+    i::before {
+        color: $white;
+    }
+    h4 {
+        color: $white;
+    }
+}
+@media (max-width: 991px) {
+    .choose__ua{        
+        &-left {
+            display: none;
+        }
+    }
+}

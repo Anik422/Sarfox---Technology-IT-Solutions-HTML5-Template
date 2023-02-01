@@ -1,0 +1,373 @@
+/*==========================================================================
+Projects Details
+========================================================================== */
+.project__area__details {
+    &-left {
+        &-content {
+            h3 {
+                padding: 25px 0;
+                a {                
+                    font-size: 30px;
+                    line-height: 40px;
+                    font-weight: 700;
+                    color: $secondary-color;
+                }
+            }
+            p {
+                margin-bottom: 25px;
+                color: $li-color;
+            }
+            &-list {
+                border-bottom: 1px solid $border2;
+                margin-bottom: 30px;                
+                ul {
+                    li {
+                        margin-bottom: 10px;
+                        color: $li-color;
+                        i {
+                            color: $primary-color;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-right {
+        &-item {
+            box-shadow: 0 0 70px $shadow;
+            background: $white;
+            padding: 40px 30px;
+            &-details {
+                ul {
+                    li:last-child  {
+                        margin: 0;
+                    }
+                    li {
+                        margin-bottom: 15px;
+                        i {    
+                            color: $primary-color;
+                            font-size: 14px;
+                            margin-right: 7px;                                                    
+                        }
+                        span {   
+                            color: $secondary-color;
+                            font-weight: 500;
+                            margin-right: 10px;                                                     
+                        }
+                        a {  
+                            color: $li-color;                          
+                        }
+                    }
+                }
+                &-help {
+                    &-contact {
+                        &-icon {
+                            i {
+                                &::before {
+                                    width: 50px;
+                                    height: 50px;
+                                    line-height: 50px;
+                                    background: $thin-bg;
+                                    color: $primary-color;
+                                    font-size: 22px;
+                                    display: inline-block;
+                                    text-align: center;
+                                    border-radius: 50%;
+                                    margin-right: 15px;
+                                }
+                            }
+                        }
+                        &-text {
+                            a {
+                                color: $li-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*==========================================================================
+Projects
+========================================================================== */
+.project__area {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    &-title {
+        margin-bottom: 55px;
+        max-width: 550px;
+    }
+    &-item {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        img {
+            transform: scale(1);
+            transition: 0.3s ease-in-out;
+        }
+        &::before {
+            position: absolute;
+            top: 0;
+            left: -75%;
+            z-index: 2;
+            display: block;
+            content: '';
+            width: 20%;
+            height: 100%;
+            transform: skewX(-25deg);
+            background: rgba(255, 255, 255, 0.246);
+        }
+        &:hover::before {
+            animation: animation 0.85s;
+        }
+    }
+    &-overly {
+        &-page {
+            position: absolute;
+            left: 30px;
+            bottom: 0px;
+            background: $primary-color1;
+            right: 30px;
+            padding: 30px;
+            border-radius: 3px;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+            z-index: 3;
+            h3 {
+                color: $white;
+                font-size: 22px;
+                line-height: 32px;
+                margin-bottom: 10px;
+            }
+            p {
+                color: $white;
+            }
+            &-icon a {
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: 30px;
+                transform: translateY(-50%);
+                i::before {
+                    background: $white;
+                    height: 40px;
+                    width: 40px;
+                    color: $primary-color;
+                    display: block;
+                    line-height: 40px;
+                    text-align: center;
+                    border-radius: 2px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    &-overly {
+        position: absolute;
+        left: 25px;
+        bottom: 0px;
+        background: $primary-color1;
+        right: 25px;
+        padding: 30px 25px;
+        border-radius: 3px;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+        z-index: 3;
+        h3 {
+            color: $white;
+            font-size: 24px;
+            line-height: 34px;
+            margin-bottom: 6px;
+        }
+        p {
+            color: $white;
+        }
+    }
+    &-icon a {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 25px;
+        transform: translateY(-50%);
+        i::before {
+            background: $white;
+            height: 45px;
+            width: 45px;
+            color: $primary-color;
+            display: block;
+            line-height: 45px;
+            text-align: center;
+            border-radius: 2px;
+            font-size: 20px;
+        }
+    }
+    .project-slider {
+        position: relative;
+        margin-right: -400px;
+    }
+	&-button {
+		text-align: right;
+		padding-right: 23px;
+		&-next {			
+            display: inline-block;
+            position: static;
+            margin: 0;
+            margin-left: 40px;
+			i {
+				&::before {
+					width: 50px;
+					height: 50px;
+					display: inline-block;
+					line-height: 50px;
+					text-align: center;
+					background: $primary-color;
+					color: $white;
+					border-radius: 50%;
+					transition: all 0.4s ease-in-out;					
+				}
+			}
+			&:hover i::before {
+				background: $secondary-color;
+                color: $white;
+			} 
+            &::after {
+                display: none;
+            } 
+		}
+		&-prev {		
+			display: inline-block;
+			position: static;
+            margin: 0;
+			i {
+				&::before {
+					width: 50px;
+					height: 50px;
+					display: inline-block;
+					line-height: 50px;
+					text-align: center;
+					background: $primary-color;
+					color: $white;
+					border-radius: 50%;
+					transition: all 0.4s ease-in-out; 
+				}
+			}
+			&:hover i::before {
+				background: $secondary-color;
+                color: $white;
+			} 
+            &::after {
+                display: none;
+            } 
+		}
+	}
+}
+@media (max-width: 1450px) {
+	.project__area {
+		&-overly {
+            h3 {
+                font-size: 18px;
+                line-height: 28px;
+                margin: 0;
+            }
+		}
+        &-icon a {
+            i::before {
+                height: 30px;
+                width: 30px;
+                line-height: 30px;
+                font-size: 15px;
+            }
+        }
+	}
+    .portfolio__area {
+        &-item {
+            img {
+                min-height: 420px;
+                object-fit: cover;
+            }
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .xl-mb-30 {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 767px) {
+    .portfolio__area {
+        &-item {
+            img {
+                min-height: initial;
+                object-fit: initial;
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+	.project__area {
+        &-title {
+            margin-bottom: 55px;
+            max-width: 550px;
+            h2 {
+                color: $secondary-color;
+            }
+        }
+	}
+    .portfolio__area {
+        padding: 100px 0;
+    }
+}
+@media (max-width: 360px) {
+	.project__area {
+		&-overly {
+            bottom: 25px;
+            left: 25px;
+            right: 25px;
+            padding: 30px 25px;
+            h3 {
+                font-size: 19px;
+                line-height: 29px;
+            }
+            &-page {
+                h3 {
+                    font-size: 19px;
+                    line-height: 29px;
+                }
+                &-icon a {
+                    right: 30px;
+                    i::before {
+                        height: 30px;
+                        line-height: 30px;
+                        width: 30px;
+                        font-size: 18px;
+                    }
+                }
+            }
+		}
+		&-icon a {
+			right: 30px;
+			i::before {
+				height: 30px;
+                line-height: 30px;
+				width: 30px;
+				font-size: 18px;
+			}
+		}
+	}
+}
+.project__area-item-hover {
+    .project__area-overly {
+        opacity: 1 !important;
+        bottom: 25px;           
+        &-page {
+            opacity: 1;
+            bottom: 30px;              
+        } 
+    }
+    img {     
+        transform: scale(1.1);           
+    }
+}

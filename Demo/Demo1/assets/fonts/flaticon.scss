@@ -1,0 +1,225 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?88b78693f270fcf877f7867cecfff884") format("truetype"),
+url("./flaticon.woff?88b78693f270fcf877f7867cecfff884") format("woff"),
+url("./flaticon.woff2?88b78693f270fcf877f7867cecfff884") format("woff2"),
+url("./flaticon.eot?88b78693f270fcf877f7867cecfff884#iefix") format("embedded-opentype"),
+url("./flaticon.svg?88b78693f270fcf877f7867cecfff884#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "best-price": "\f101",
+    "next": "\f102",
+    "right": "\f103",
+    "up-arrow": "\f104",
+    "menu": "\f105",
+    "search": "\f106",
+    "home-icon-silhouette": "\f107",
+    "home": "\f108",
+    "placeholder": "\f109",
+    "locations": "\f10a",
+    "internet": "\f10b",
+    "programmer": "\f10c",
+    "coding": "\f10d",
+    "team": "\f10e",
+    "close": "\f10f",
+    "bubble-chat": "\f110",
+    "right-quotes-symbol": "\f111",
+    "price-label": "\f112",
+    "money": "\f113",
+    "check": "\f114",
+    "team-1": "\f115",
+    "badge": "\f116",
+    "customer-satisfaction": "\f117",
+    "project-plan": "\f118",
+    "data-recovery": "\f119",
+    "cloud-computing": "\f11a",
+    "security": "\f11b",
+    "technical-support": "\f11c",
+    "pin": "\f11d",
+    "comment": "\f11e",
+    "calendar": "\f11f",
+    "user": "\f120",
+    "user-1": "\f121",
+    "user-2": "\f122",
+    "customer-service": "\f123",
+    "left-arrow": "\f124",
+    "arrow-left": "\f125",
+    "instagram": "\f126",
+    "linkedin": "\f127",
+    "twitter": "\f128",
+    "facebook": "\f129",
+    "right-arrow": "\f12a",
+    "arrow-right": "\f12b",
+    "email": "\f12c",
+    "phone-call": "\f12d",
+    "chip": "\f12e",
+    "minus": "\f12f",
+    "plus": "\f130",
+    "programmer-1": "\f131",
+    "networking": "\f132",
+);
+
+.flaticon-best-price:before {
+    content: map-get($flaticon-map, "best-price");
+}
+.flaticon-next:before {
+    content: map-get($flaticon-map, "next");
+}
+.flaticon-right:before {
+    content: map-get($flaticon-map, "right");
+}
+.flaticon-up-arrow:before {
+    content: map-get($flaticon-map, "up-arrow");
+}
+.flaticon-menu:before {
+    content: map-get($flaticon-map, "menu");
+}
+.flaticon-search:before {
+    content: map-get($flaticon-map, "search");
+}
+.flaticon-home-icon-silhouette:before {
+    content: map-get($flaticon-map, "home-icon-silhouette");
+}
+.flaticon-home:before {
+    content: map-get($flaticon-map, "home");
+}
+.flaticon-placeholder:before {
+    content: map-get($flaticon-map, "placeholder");
+}
+.flaticon-locations:before {
+    content: map-get($flaticon-map, "locations");
+}
+.flaticon-internet:before {
+    content: map-get($flaticon-map, "internet");
+}
+.flaticon-programmer:before {
+    content: map-get($flaticon-map, "programmer");
+}
+.flaticon-coding:before {
+    content: map-get($flaticon-map, "coding");
+}
+.flaticon-team:before {
+    content: map-get($flaticon-map, "team");
+}
+.flaticon-close:before {
+    content: map-get($flaticon-map, "close");
+}
+.flaticon-bubble-chat:before {
+    content: map-get($flaticon-map, "bubble-chat");
+}
+.flaticon-right-quotes-symbol:before {
+    content: map-get($flaticon-map, "right-quotes-symbol");
+}
+.flaticon-price-label:before {
+    content: map-get($flaticon-map, "price-label");
+}
+.flaticon-money:before {
+    content: map-get($flaticon-map, "money");
+}
+.flaticon-check:before {
+    content: map-get($flaticon-map, "check");
+}
+.flaticon-team-1:before {
+    content: map-get($flaticon-map, "team-1");
+}
+.flaticon-badge:before {
+    content: map-get($flaticon-map, "badge");
+}
+.flaticon-customer-satisfaction:before {
+    content: map-get($flaticon-map, "customer-satisfaction");
+}
+.flaticon-project-plan:before {
+    content: map-get($flaticon-map, "project-plan");
+}
+.flaticon-data-recovery:before {
+    content: map-get($flaticon-map, "data-recovery");
+}
+.flaticon-cloud-computing:before {
+    content: map-get($flaticon-map, "cloud-computing");
+}
+.flaticon-security:before {
+    content: map-get($flaticon-map, "security");
+}
+.flaticon-technical-support:before {
+    content: map-get($flaticon-map, "technical-support");
+}
+.flaticon-pin:before {
+    content: map-get($flaticon-map, "pin");
+}
+.flaticon-comment:before {
+    content: map-get($flaticon-map, "comment");
+}
+.flaticon-calendar:before {
+    content: map-get($flaticon-map, "calendar");
+}
+.flaticon-user:before {
+    content: map-get($flaticon-map, "user");
+}
+.flaticon-user-1:before {
+    content: map-get($flaticon-map, "user-1");
+}
+.flaticon-user-2:before {
+    content: map-get($flaticon-map, "user-2");
+}
+.flaticon-customer-service:before {
+    content: map-get($flaticon-map, "customer-service");
+}
+.flaticon-left-arrow:before {
+    content: map-get($flaticon-map, "left-arrow");
+}
+.flaticon-arrow-left:before {
+    content: map-get($flaticon-map, "arrow-left");
+}
+.flaticon-instagram:before {
+    content: map-get($flaticon-map, "instagram");
+}
+.flaticon-linkedin:before {
+    content: map-get($flaticon-map, "linkedin");
+}
+.flaticon-twitter:before {
+    content: map-get($flaticon-map, "twitter");
+}
+.flaticon-facebook:before {
+    content: map-get($flaticon-map, "facebook");
+}
+.flaticon-right-arrow:before {
+    content: map-get($flaticon-map, "right-arrow");
+}
+.flaticon-arrow-right:before {
+    content: map-get($flaticon-map, "arrow-right");
+}
+.flaticon-email:before {
+    content: map-get($flaticon-map, "email");
+}
+.flaticon-phone-call:before {
+    content: map-get($flaticon-map, "phone-call");
+}
+.flaticon-chip:before {
+    content: map-get($flaticon-map, "chip");
+}
+.flaticon-minus:before {
+    content: map-get($flaticon-map, "minus");
+}
+.flaticon-plus:before {
+    content: map-get($flaticon-map, "plus");
+}
+.flaticon-programmer-1:before {
+    content: map-get($flaticon-map, "programmer-1");
+}
+.flaticon-networking:before {
+    content: map-get($flaticon-map, "networking");
+}

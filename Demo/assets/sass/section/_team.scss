@@ -1,0 +1,149 @@
+/*==========================================================================
+Team
+========================================================================== */
+.team__area {
+    &-team {
+        &-content {
+            padding: 25px 30px;
+            background: $white;
+            margin-top: -30px;
+            position: relative;
+            z-index: 3;
+            transition: all 0.4s ease-out 0s;
+            box-shadow: 0 20px 50px $shadow;
+        }
+    }
+    &-about {        
+        padding: 240px 0 130px 0;
+    }
+    &-image {
+        &-img {     
+            position: relative;     
+            overflow: hidden;  
+            &::before {
+                position: absolute;
+                top: 0;
+                left: -75%;
+                z-index: 2;
+                display: block;
+                content: '';
+                width: 20%;
+                height: 100%;
+                transform: skewX(-25deg);
+                background: rgba(255, 255, 255, 0.246);
+            }
+        }
+    }
+    &-item {
+        &:hover .team__area-icon {
+            opacity: 1;
+            left: 20px;
+        }
+        &:hover .team__area-image-img::before {
+            animation: animation 0.85s;
+        }
+        &:hover .team__area-content {
+            &::before {
+                opacity: 1;
+            }
+            h3 {
+                color: $white;
+            }
+            p {
+                color: $white;
+            }
+        }
+        &:hover .team__area-team-content {
+            background: $primary-color;
+            h3 {
+                color: $white;
+            }
+            p {
+                color: $white;
+            }
+        }
+    }
+    &-icon {
+        position: absolute;
+        top: 20px;
+        left: 0px;
+        opacity: 0;
+        transition: .6s;
+        z-index: 10;
+        ul {
+            li {
+                i {
+                    &::before {                        
+                        width: 40px;
+                        height: 40px;
+                        display: inline-block;
+                        border-radius: 50%;
+                        text-align: center;
+                        line-height: 40px;
+                        color: $white;
+                        background: $primary-color;
+                        transition: .6s;
+                        margin-bottom: 10px;
+                    }
+                    &:hover::before {
+                        background: $white;
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+    &-content {
+        padding: 25px 30px;
+        background: $white;
+        margin-top: -30px;
+        position: relative;
+        z-index: 3;
+        box-shadow: 0 20px 50px $shadow;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s ease-out 0s;
+            background: $primary-color1;
+            z-index: -1;
+            opacity: 0;
+        }
+        p { 
+            color: $li-color;         
+            transition: all 0.4s ease-out 0s;
+        }
+        h3 {
+            transition: all 0.4s ease-out 0s;
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .team__area {       
+        padding: 130px 0 100px 0; 
+        &-content {
+            padding: 20px 14px;
+            h3 {
+                font-size: 22px;
+                line-height: 32px;
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .team__area { 
+        padding: 130px 0 100px 0; 
+    }
+}
+@media (max-width: 767px) {
+    .team__area { 
+        padding: 130px 0 100px 0;
+        &-team {
+            padding: 130px 0 180px 0;            
+        }
+    }
+}
+

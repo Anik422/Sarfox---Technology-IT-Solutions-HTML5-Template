@@ -1,0 +1,138 @@
+/*==========================================================================
+Testimonial
+========================================================================== */
+.testimonial__area {
+    &-mt-175 {
+        margin-top: -175px;
+    }
+    &-bg {
+        background: #0a0e2f;
+        padding: 60px;
+        padding-right: 0;
+    }
+    &-image {
+        &::after {
+            position: absolute;
+            content: '';
+            border: 3px solid $primary-color;
+            width: 140px;
+            height: 345px;
+            left: 45px;
+            bottom: -55px;
+            transform: rotate(36deg);
+            border-radius: 80px;
+            z-index: -1;
+            opacity: 60%;
+        }
+        img {
+            max-width: 230px;
+            height: auto;
+            border-radius: 50%;
+        }
+    }
+    &-content {    
+        :first-child {
+            color: $white;
+            font-size: 16px;
+        }
+        max-width: 550px;
+        p {
+            font-size: 15px;
+            color: $primary-color;
+        } 
+         h5 {
+            font-weight: 700;
+            color: $white;
+        }
+        i {
+            position: absolute;
+            right: 25%;
+            bottom: 0;
+            font-size: 40px;
+            color: $primary-color;
+            opacity: 60%;
+        }
+    }
+}
+.pagination-area {
+	position: absolute;
+	right: 50px;
+	top: 33%;
+	z-index: 2;
+    &::before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 10px;
+        bottom: 40%;
+        left: 2px;
+        background: $secondary-color;
+        z-index: 2;
+    }
+    .dots span {
+        display: list-item;
+        height: 60px;
+        width: 5px;
+        background: $white;
+        position: relative;
+        opacity: 20%;
+        border-radius: 0;
+        transition: .5s;
+    }
+}
+.pagination-area .dots span.swiper-pagination-bullet-active {
+	height: 60px;
+	width: 5px;
+	background: $primary-color;
+	opacity: 100%;
+	border-radius: 0;
+}
+@media (max-width: 1199px) {
+    .testimonial__area {
+        &-image {
+            &::after {
+                width: 130px;
+                height: 290px;
+                left: 30px;
+                bottom: -45px;
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .testimonial__area {
+        &-bg {
+            padding: 30px;
+        }
+        &-image {
+            &::after {
+                width: 100px;
+                height: 210px;
+                left: 15px;
+                bottom: -35px;
+            }
+        }
+    }
+    .pagination-area {
+        display: none;
+    }
+}
+@media (max-width: 767px) {
+    .testimonial__area {
+        &-bg {
+            padding: 30px;
+        }
+        &-image {
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+    .testimonial__area {
+        &-bg {
+            text-align: center;
+        }
+    }
+}
